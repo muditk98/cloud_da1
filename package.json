@@ -1,0 +1,11 @@
+{
+  "name": "da1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Mudit Kapoor 16BLC1100",
+  "license": "ISC"
+}
