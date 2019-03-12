@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 
-let key = '5E563EF97775105125A5E5C3E3AE39FE';
+let key = process.env.steam_key;
 
 let steam_id = '';
 app.use(bodyParser.json());
@@ -60,4 +60,10 @@ app.post('/', (req, app_res) => {
 	}	
 })
 
-app.listen(5000);
+if (key) {
+	let port = process.env.port || 3000;
+	app.listen(port);
+	console.log(`Server running on port: ${port}`);
+} else {
+	console.log('key undefined');
+}
